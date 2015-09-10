@@ -1,0 +1,41 @@
+# Status line
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+startup_message off
+#
+# Default screens
+#
+
+# Root shell
+screen -t rootsh su
+
+# Utility shells
+screen -t sh1
+screen -t sh2
+screen -t sh3
+
+# eclipse workspace shell
+#chdir ~/eclipse_workspaces
+#screen -t eclipsews
+
+# interpreters
+chdir ~
+screen -t ipython
+#screen -t groovysh groovysh
+#screen -t scalash scala
+#screen -t js js
+
+# books dir
+#chdir ~/documents/ebooks
+#screen -t ebooks
+
+# tmp dir
+#chdir /tmp
+#screen -t tmp
+
+# launcher shell to launch other gui programs
+# allows all sorts of logging junk to stay in one shell
+chdir ~
+screen -t launchsh
+
+#bindings
